@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <title>Highlights</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#5B7E3C;
+        }
+
+
+        .navbar{
+            background:#A2CB8B;
+            padding:18px 40px;
+
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr;
+            align-items:center;
+
+            border-bottom:2px solid #dbe4ff;
+        }
+
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+            color:#3559e0;
+        }
+
+
+        .nav-links{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+        }
+
+        .nav-links a{
+            text-decoration:none;
+            color:#444;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .nav-links a:hover{
+            color:#3559e0;
+        }
+
+
+        .search-box{
+            display:flex;
+            justify-content:flex-end;
+        }
+
+        .search-box input{
+            padding:10px 15px;
+            border-radius:25px;
+            border:2px solid #dbe4ff;
+            width:220px;
+
+            outline:none;
+            transition:0.3s;
+        }
+
+        .search-box input:focus{
+            border-color:#3559e0;
+        }
+
+
+        .hero{
+            text-align:center;
+            padding:60px 20px 30px 20px;
+        }
+
+        .hero h1{
+            font-size:55px;
+            margin-bottom:10px;
+            color:#1d1d1d;
+        }
+
+        .hero p{
+            font-size:20px;
+            color:#666;
+        }
+
+
+        .gallery{
+            width:90%;
+            margin:auto;
+
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+            gap:22px;
+
+            padding-bottom:60px;
+        }
+
+        .card{
+            background:#E8F5BD;
+            border-radius:20px;
+            overflow:hidden;
+
+            transition:0.3s;
+
+            border:2px solid #dbe4ff;
+        }
+
+        .card:hover{
+            transform:rotate(-1deg) scale(1.02);
+        }
+
+        .card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
+
+        .info{
+            padding:18px;
+        }
+
+        .tag{
+            display:inline-block;
+            background:#3559e0;
+            color:white;
+
+            padding:6px 12px;
+            border-radius:30px;
+
+            font-size:13px;
+            margin-bottom:12px;
+        }
+
+        .info h3{
+            margin:0;
+            font-size:25px;
+            color:#222;
+        }
+
+        .info p{
+            margin-top:10px;
+            color:#666;
+            line-height:1.5;
+        }
+
+
+
+        footer{
+            text-align:center;
+            padding:20px;
+            background:white;
+            color:#666;
+            border-top:2px solid #dbe4ff;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="navbar">
+
+        <!-- LEFT -->
+        <div class="logo">
+            10-Ruby
+        </div>
+
+        <div class="nav-links">
+            <a href="http://127.0.0.1:5500/pic.html">Home</a>
+            <a href="http://127.0.0.1:5500/sw.html">Gallery</a>
+            <a href="http://127.0.0.1:5500/sk.html">Tracker</a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search memories...">
+        </div>
+
+    </div>
+
+    <div class="hero">
+
+        <h1>highlights of 10-Ruby</h1>
+
+<h2 class="mt-3">Classmates Gallery</h2>
+
+<div class="grid">
+
+<div class="card">
+    <img src="Ebti.jpg">
+    <div class="card-body">
+        <h5>Al Hazmi</h5>
+        <p>Chaos</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="au.jpg">
+    <div class="card-body">
+        <h5>Alvarez</h5>
+        <p>Ped Xing</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="me.jpg">
+    <div class="card-body">
+        <h5>Belsa</h5>
+        <p>Ez Volleyball</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="zoe.jpeg">
+    <div class="card-body">
+        <h5>Bernas</h5>
+        <p>Science Club with koreen san</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="koreen.jpeg">
+    <div class="card-body">
+        <h5>Calaycay</h5>
+        <p>Science club with zoe kun</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="jam.jpg">
+    <div class="card-body">
+        <h5>Castelo</h5>
+        <p>Goofy</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="mey.jpg">
+    <div class="card-body">
+        <h5>Cruz</h5>
+        <p>Dance</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="ely.jpg">
+    <div class="card-body">
+        <h5>Defensor</h5>
+        <p>Class pic</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="Luna.jpg">
+    <div class="card-body">
+        <h5>Dimasuhid</h5>
+        <p>Glee</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="mau.jpg">
+    <div class="card-body">
+        <h5>Francisco</h5>
+        <p> JCO cutie</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="chris.jpg">
+    <div class="card-body">
+        <h5>Hsu</h5>
+        <p>Japan!!</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="Denise.jpg">
+    <div class="card-body">
+        <h5>Juatchon</h5>
+        <p>With trisha kun</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="judah.jpg">
+    <div class="card-body">
+        <h5>Judge</h5>
+        <p>Mog.</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="geof.jpeg">
+    <div class="card-body">
+        <h5>Lilagan</h5>
+        <p>elected as officer</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="saml.jpg">
+    <div class="card-body">
+        <h5>Luna</h5>
+        <p>Ted Talk</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="enzo.jpg">
+    <div class="card-body">
+        <h5>Macaranas</h5>
+        <p>Taking care of kids in JCO</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="pin.jpeg">
+    <div class="card-body">
+        <h5>Mateo</h5>
+        <p>Band people</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="ash.jpg">
+    <div class="card-body">
+        <h5>Mondragon</h5>
+        <p>Band drawings</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="lanc.jpeg">
+    <div class="card-body">
+        <h5>Naldoza</h5>
+        <p>Math club</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="bab.png">
+    <div class="card-body">
+        <h5>Natividad</h5>
+        <p>Gab Propaganda</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="sofia.jpg">
+    <div class="card-body">
+        <h5>Ng</h5>
+        <p> Science Club</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="ong.JPG">
+    <div class="card-body">
+        <h5>Ong</h5>
+        <p>In JCO</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="twisha.jpg">
+    <div class="card-body">
+        <h5>Paz</h5>
+        <p>High grades in SS</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="miggy.jpg">
+    <div class="card-body">
+        <h5>Ramos, M.</h5>
+        <p>AJ Kalinga</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="quen.jpg">
+    <div class="card-body">
+        <h5>Ramos, Q.</h5>
+        <p>Ted Talk</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="SamR.PNG">
+    <div class="card-body">
+        <h5>Ramos, S.</h5>
+        <p>Pasado DLSU</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="Ashlei.png">
+    <div class="card-body">
+        <h5>Reodica</h5>
+        <p> GREEN HORNETS!</p>
+    </div>
+</div>
+
+<div class="card">
+    <img src="von.jpeg">
+    <div class="card-body">
+        <h5>Repolona</h5>
+        <p>Camera</p>
+    </div>
+</div>
+
+</div>
+</div>
+
+
+
+    <div class="gallery" id="gallery"></div>
+
+
+
+    <footer>
+        © 2025-2026 10-Ruby
+    </footer>
+
+</body>
+</html>
