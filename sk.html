@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <title>Attendance Tracker</title>
+
+    <py-config>
+        packages = ["matplotlib"]
+    </py-config>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            background: #5B7E3C;
+            margin: 0;
+            color: white;
+        }
+
+
+        .navbar{
+            background:#A2CB8B;
+            padding:18px 40px;
+
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr;
+            align-items:center;
+
+            border-bottom:2px solid #660000;
+            box-shadow:0 2px 10px black;
+        }
+
+
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+            color:#ff4d4d;
+        }
+
+        /* CENTER */
+
+        .nav-links{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+        }
+
+        .nav-links a{
+            text-decoration:none;
+            color:white;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .nav-links a:hover{
+            color:#ff4d4d;
+        }
+
+          
+
+        .search-box{
+            display:flex;
+            justify-content:flex-end;
+        }
+
+        .search-box input{
+            padding:10px 15px;
+            border-radius:25px;
+            border:none;
+
+            width:220px;
+
+            outline:none;
+            background:#5B7E3C;
+            color:white;
+        }
+
+        .search-box input::placeholder{
+            color:#ddd;
+        }
+
+   
+
+        .header {
+            background: #5B7E3C;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow:0 2px 10px black;
+        }
+
+
+        .main {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #5B7E3C;
+            padding: 20px;
+            border-radius: 12px;
+            width: 300px;
+            box-shadow: 0 0 15px black;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #5B7E3C;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background: #E8F5BD;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+            font-weight:bold;
+        }
+
+        button:hover {
+            background: #E8F5BD;
+        }
+
+        #output {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        canvas {
+            background:#5B7E3C;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="navbar">
+
+        <div class="logo">
+            10-Ruby
+        </div>
+
+        <div class="nav-links">
+            <a href="http://127.0.0.1:5500/pic.html">Home</a>
+            <a href="http://127.0.0.1:5500/sw.html">Gallery</a>
+            <a href="http://127.0.0.1:5500/sk.html">Tracker</a>
+        </div>
+
+
+        <div class="search-box">
+            <input type="text" placeholder="Search memories...">
+        </div>
+
+    </div>
+
+
+ 
+
+    <div class="header">
+        Weekly Attendance Tracker 📊
+    </div>
+
+
+
+    <div class="main">
+
+        <div class="card">
+
+            <h3>Enter Data</h3>
+
+            <label>Day</label>
+
+            <select id="day">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+            </select>
+
+            <label>Absences</label>
+
+            <input type="number" id="absences" placeholder="input number">
+
+            <button py-click="update">
+                Add / Update
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Graph</h3>
+
+            <div id="output"></div>
+
+        </div>
+
+    </div>
+
+<py-script src="main.py"></py-script>
+
+</body>
+</html>
